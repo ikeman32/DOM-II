@@ -23,3 +23,36 @@ const body = document.querySelector('body');
 body.addEventListener("wheel", () => {
     body.style.backgroundColor = "purple";
 });
+
+const image = document.querySelector(".img-fluid");
+
+image.addEventListener("mousedown", () => {
+    image.style.opacity = "0.5";
+});
+
+image.addEventListener("mouseup", () => {
+    image.style.opacity = "1.0";
+});
+
+
+const btn = document.querySelector(".btn");
+
+btn.addEventListener("dblclick", () => {
+    btn.style.opacity = "0.5";
+});
+
+btn.addEventListener("mouseout", () => {
+    btn.style.opacity = "1.0";
+})
+
+const img = document.querySelector(".content-section .img-content img");
+
+img.addEventListener("mouseenter", () => {
+    img.style.transform = "rotate(360deg)";
+    img.style.transition = "all 1s";
+});
+
+img.addEventListener("mouseleave", () => {
+    img.style.transform = "rotate(-360deg)";
+    img.style.transition = "all 1s";
+})
