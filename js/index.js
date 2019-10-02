@@ -6,6 +6,7 @@ const busClick = document.querySelector("img");
 window.addEventListener("load", () => {
     busClick.style.transform = "scale( 1.2)";
     busClick.style.transition = "all 2s";
+
 });
 
 busClick.addEventListener("mouseover", () => {
@@ -33,6 +34,17 @@ image.addEventListener("mousedown", () => {
 image.addEventListener("mouseup", () => {
     image.style.opacity = "1.0";
 });
+const bg = document.querySelector('.text-content');
+bg.addEventListener('click', () => {
+    bg.style.backgroundColor = "red";
+});
+
+const tc = document.querySelector('.text-content h2');
+
+tc.addEventListener('click', (e) => {
+    tc.style.backgroundColor = "yellow";
+    e.stopPropagation(); //stops propagation of color changes
+});
 
 
 const btn = document.querySelector(".btn");
@@ -56,3 +68,9 @@ img.addEventListener("mouseleave", () => {
     img.style.transform = "rotate(-360deg)";
     img.style.transition = "all 1s";
 })
+
+document.querySelectorAll('.nav-link').forEach(item => {
+    item.addEventListener('click', e => {
+        e.preventDefault();
+    }, false);
+});
